@@ -12,6 +12,7 @@ class Transaction:
 
 
     def stars_account(self, word):
+        """Маскирует номер карты или номер счета"""
         if "Счет" in str(word):
             return "Счет " + '*' * 2 + word[-4:]
         elif "Maestro" in str(word):
